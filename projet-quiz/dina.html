@@ -1,0 +1,43 @@
+  <!DOCTYPE html>
+ <html>
+     <head>
+    <meta charset="UTF-8">
+</head>
+   
+    <body>
+        <form action="" name="somme" >
+            <input type="number"name="valeur1" id="nbr1">
+            <input type="number" name="valeur2" id="nbr2">
+            <input type="button" name="booton" value="clickhere" onclick="sum();" > 
+
+        </form>
+        <div id="af">
+            <p id="summ"></p>
+        </div>
+        
+
+
+
+    </body>
+    </html>
+    <script>
+        function sum(){
+       var valeur1= Number(document.getElementById("nbr1").value);
+       var valeur2= Number(document.getElementById("nbr2").value);;
+      
+       summ=valeur1+valeur2;
+       document.getElementById("af").style.visibility="visible";
+        document.getElementById("summ").innerHTML="you got "+ summ +"summ.";
+        }
+
+        
+
+
+
+
+
+    </script>
+
+
+
+

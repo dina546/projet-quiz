@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>quiz</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./projet-quiz.css">
+</head>    
+<body>
+    <div id="title">
+    <h1>This is a quiz on the internet </h1> <br>
+
+</div>
+<form id="rond" name="quiz">
+   
+    
+        <h3>What is the capital of h island</h3>
+        <input type="text" name="question1" class="q1">
+        
+       
+             <h3>What is the capital of hollande</h3> <br>
+             <input type="radio" name="question2" value="Amesterdam"> Amesterdam <br>
+             <input type="radio" name="question2" value="paris"> Paris <br>
+        
+        
+             <h3>What is the capital of new york</h3>
+             <input type="radio" name="question3" value="Albany"> Albany <br>
+             <input type="radio" name="question3"value="Albini">Albini <br>
+        <input type="button" name="button" value="i'am finishid!" onclick="check();">
+        
+</form>
+<div id="after-submit">
+    <p  id="number-correct"></p>
+    <p id="rang"></p>
+</div>
+</html>
+
+</body>
+
+
+
+</html>
+<script>
+    function check()
+    {
+        var question1=document.quiz.question1.value;
+        var question2=document.quiz.question2.value;
+        var question3=document.quiz.question3.value;
+        var correct=0;
+        if(question1=="ha"){
+            correct++;
+
+        }
+        if(question2=="Amesterdam") {
+            correct++;
+        }
+        if (question3=="Albany") {
+            correct++;
+        }
+        var tableau=["great job","that's okey","you need to do better"]
+        var rang 
+        if (correct<1) 
+        {
+         rang=3;
+            
+        }
+        if (correct>0 && correct<3)  {
+            rang=2;
+            
+        }
+        if (correct>2) {
+            rang=1;
+        }
+
+
+
+
+
+
+
+        document.getElementById("after-submit").style.visibility="visible";
+        document.getElementById("number-correct").innerHTML="you got "+ correct +"correct.";
+        document.getElementById("rang").innerHTML=tableau[rang];
+
+    }
+   
+   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
